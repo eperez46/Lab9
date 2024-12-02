@@ -1,10 +1,21 @@
 // Define a template using Mustache.js
 var template = `
-    <ul>
+    <div>
         {{#data}}
-        <li>Name: {{name}}, Age: {{age}}, City: {{city}}</li>
+        {{#My class schedule}}
+        <h2>My Class Schedule: {{.}}</h2>
+        {{/My class schedule}}
+        {{#1st class}}
+        <p>1st Class: {{.}}</p>
+        {{/1st class}}
+        {{#2nd class}}
+        <p>2nd Class: {{.}}</p>
+        {{/2nd class}}
+        {{#3rd}}
+        <p>3rd Class: {{.}}</p>
+        {{/3rd}}
         {{/data}}
-    </ul>
+    </div>
 `;
 
 // Get the 'output' div element
